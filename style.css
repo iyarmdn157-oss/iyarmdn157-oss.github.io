@@ -292,7 +292,6 @@ footer {
     font-size: 13px;
 }
 
-/* MEDIA QUERIES UNTUK HP / MOBILE */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
