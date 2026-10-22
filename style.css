@@ -213,14 +213,37 @@ body {
     font-size: 13px;
 }
 
+/* GRID PROYEK 3 KOLOM SEJAJAR */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr) !important; /* Paksa jadi 3 kolom */
     gap: 20px;
-    max-width: 800px;
+    max-width: 1200px !important; /* Melebarkan pembungkus agar 3 kartu muat */
     margin: 0 auto;
+    width: 100%;
 }
 
+.project-card {
+    background: #1e293b;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    transition: 0.3s;
+    height: 100%; /* Memastikan tinggi semua kartu sama */
+}
+
+/* RESPONSIF UNTUK TAMPILAN HP DAN TABLET */
+@media (max-width: 992px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr) !important; /* 2 kolom di tablet */
+    }
+}
+
+@media (max-width: 640px) {
+    .projects-grid {
+        grid-template-columns: 1fr !important; /* 1 kolom di HP */
+    }
+}s
 .project-card {
     background: #1e293b;
     padding: 22px;
